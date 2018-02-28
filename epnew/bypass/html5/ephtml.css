@@ -1,0 +1,368 @@
+body, h1, h2, h3, .myMainTitle, .mediumTitle, .mediumLabels, .SmallSubTitles, .smallButtons, .smallLabels {
+	font-family:'Segoe UI',Times;
+	
+}
+
+h1, .myMainTitle {
+	color: #636871;
+	font-size: 50px;
+	font-family: Times;
+	font-weight:300;
+	margin: 0 0 0 0;
+	padding-bottom: 0;
+}
+
+h2, .mediumTitle {
+	font-size: 25px;
+	color: #636871;
+	
+}
+h3, .mySubTitleGray {
+	font-size: 14px;
+	
+	color: #757b85;
+}
+a, .smallButtons {
+	font-size: 12px;
+	
+	color: #5E6066;
+}
+
+.SmallSubTitles {
+	color: #636871;
+	
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.mySubTitleGrayLinkBar {
+	color: #636871;
+	
+	font-size: 16px;
+}
+
+.mediumLabels {
+
+	font-size: 14px;
+	color: #424449;
+}
+.mediumLabels a {
+	font-size: 14px;
+	color: #636871;
+}
+
+.smallLabels {
+
+	font-size: 12px;
+	color: #424449;
+}
+.surveyText {
+	font-size: 14px;
+	color: #2A2A2A;
+}
+.surveyAnswerText {
+	font-size: 14px;
+}
+.scrollableDiv {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+table {
+	border: 0px;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+td, tr {
+	margin-bottom: 3px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding: 2px;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #CCC;
+}
+
+hr {
+	margin: 0 0 0 0;
+	padding-top: 0;
+	color: #333;
+	box-shadow: 2px 2px 1px #999;
+}
+
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+a:active {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#horizon {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	width: 100%;
+	height: 1px;
+	overflow: visible;
+	display: block
+}
+#dialog-mask {display: none;position:fixed; top:0; left:0; height:100%; width:100%; background:#000000; opacity:.75; filter:alpha(opacity=65); z-index:100}
+#userBox {
+	
+	position: absolute;
+	top: 10px;
+	right: 40px;
+}
+#login_box {
+	z-index:300;
+	width: 220px;
+	height: 250px;
+	margin-left: -110px;
+	position: absolute;
+	top: -125px;
+	left: 50%;
+	background-color: rgba(190,190,190,.88);
+	border: 1px solid black;
+	border-radius: 4px;
+	box-shadow: 4px 4px 2px #999;
+	display: none;
+}
+#maindiv {
+	margin-top: 30px;
+	margin-left: 30px;
+	width: 700px;
+	height: 600px;
+}
+
+a.checkbutton {
+	background: url(images/checkmark.png);
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
+	background-position: 50px;
+	text-indent: 30px;
+	display: block;
+	height: 30px;
+	line-height: 29px;
+	margin-bottom: 14px;
+	text-decoration: none;
+	width: 191px;
+	cursor: pointer;
+}
+a:hover.checkbutton {
+	text-decoration: underline;
+	cursor: pointer;
+}
+a:active.checkbutton {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+
+
+.question {
+	margin-top: 30px;
+
+}
+.questionHeader{
+	margin-bottom: 20px;
+}
+.likertbutton{
+	float:left;
+}
+.question .odd {
+	background-color: rgba(100,108,121,.5);
+}
+
+.question table th {
+	padding: 0px;
+}
+.question table th.skew {
+	height: 90px;
+	width: 55px;
+	position: relative;
+	vertical-align: bottom;
+}
+.likertgroupbutton {
+  float: none;
+	display: inline-block;
+}
+.likertgroupquestion{
+	text-align:left;
+}
+.question table th.skew > div {
+	position: relative;
+	top: 0px;
+	right: 45px;
+	height: 100%;
+	transform: skew(45deg,0deg);
+	-ms-transform: skew(45deg,0deg);
+	-moz-transform: skew(45deg,0deg);
+	-webkit-transform: skew(45deg,0deg);
+	-o-transform: skew(45deg,0deg);
+	overflow: hidden;
+}
+
+.question table th.skew span {
+	transform: skewX(-45deg) rotate(45deg);
+	-ms-transform: skewX(-45deg) rotate(45deg);
+	-moz-transform: skewX(-45deg) rotate(45deg);
+	-webkit-transform: skew(-45deg,0deg) rotate(45deg);
+	-o-transform: skew(-45deg,0deg) rotate(45deg);
+	position: absolute;
+	right: -20px;
+	width: 100px;
+	top: 30px;
+	
+}
+
+.question table tbody > div {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	margin-left:auto;
+	margin-right:auto;
+}
+.question table thead th {
+
+	font-weight: 500;
+}
+.question table tbody td {
+
+	text-align: center;
+	vertical-align: middle;
+	border: none;
+	border-bottom: 1px solid #CCC;
+	padding: 0px;
+}
+
+.surveyPage {
+
+}
+
+.styledRadio {
+	background-size: 100%;
+	
+}
+
+#maindiv ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: none;
+}
+
+#maindiv ol li {
+	float: left;
+}
+
+#maindiv ol li div {
+	
+}
+.question textarea { 
+height:40px;
+width:75%;
+} 
+.checkboxgroup table{
+	width:75%;
+}
+.checkboxgroup table tr td{
+	text-align:left;
+}
+.checkcell{
+	width:30px;
+}
+.uncheckedrb{
+	float: left;
+	background: url(images/rb.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	width:20px; height:20px
+}
+.checkedrb{
+	float: left;
+	background: url(images/selected.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	width:20px; height:20px
+}
+.likertrbcell{
+	width:50px;
+}
+.likert td, tr {
+	border: none;
+	border-bottom: none;
+	padding: 0px;
+}
+.likert table tbody td {
+	text-align: left;
+	vertical-align: middle;
+	border: none;
+	border-bottom: none;
+	padding: 0px;
+}
+
+
+
+.editButton{
+	width:35px;
+	height:35px;
+	background: url(/epnew/bypass/html5/images/pencil20.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.editButton:hover{
+	background: url(/epnew/bypass/html5/images/pencil20-over.png);
+	background-repeat: no-repeat;
+}
+
+
+
+.prompt {
+background: white url(../img/jquery.modaldialog/p_bg.jpg) bottom right no-repeat;
+border: 1px solid #4F6D81;
+border-top: none;
+}
+
+#dialog {position:fixed; width:525px; padding:0px; z-index:200; background:#fff; font-family:Cambria, Times New Roman; font-size:14px; }
+#dialog-header {display:block; position:relative; padding:3px 6px 7px; height:14px; font-size:14px; font-weight:bold;
+/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(top, #FFFFFF 0%, #B9BDAC 100%);
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #FFFFFF 0%, #B9BDAC 100%);
+/* Opera */ 
+background-image: -o-linear-gradient(top, #FFFFFF 0%, #B9BDAC 100%);
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #B9BDAC));
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #B9BDAC 100%);
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to bottom, #FFFFFF 0%, #B9BDAC 100%);
+border:1px solid #4f6d81; border-bottom:none;
+}
+#dialog-title {float:left}
+#dialog-close {float:right; cursor:pointer; margin:3px 3px 0 0; height:11px; width:11px; background:url(/epnew/bypass/html5/image/close.gif) no-repeat}
+#dialog-content {display:block; padding:6px; min-height:160px; color:#666666; font-size:13px;}
+#dialog-content-inner { min-height:128px; }
+#dialog-mask {position:fixed; top:0; left:0; height:100%; width:100%; background:#FFF; opacity:.75; filter:alpha(opacity=75); z-index:100}
+#dialog-button-container { text-align:center; margin:2px 6px 6px 2px; }
+#dialog-button { font-weight:bold; font-size:1.1em; font-family:Arial, sans-serif; padding:2px 5px 2px 5px; }
+.prompt {background:#fff bottom right no-repeat; border:1px solid #4f6d81; border-top:none}
+.promptbutton { background-color:#A2A697; border:1px solid #fff; color:#fff; }
+.promptbutton:hover{
+	-webkit-transition: all 1s;
+	background-color:#555555;
+}
+
+

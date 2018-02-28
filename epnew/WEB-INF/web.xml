@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+<display-name>
+	Evaluation Portal 2.0</display-name>
+
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<resource-ref>
+ 		 <description>EPC Database</description>
+ 		 <res-ref-name>jdbc/epc</res-ref-name>
+  		 <res-ref-type>javax.sql.DataSource</res-ref-type>
+ 		 <res-auth>Container</res-auth>
+	</resource-ref>
+
+	<resource-ref>
+ 		 <description>DCFS Database</description>
+ 		 <res-ref-name>jdbc/dcfs</res-ref-name>
+  		 <res-ref-type>javax.sql.DataSource</res-ref-type>
+ 		 <res-auth>Container</res-auth>
+	</resource-ref>
+	<listener>
+		<listener-class>org.epc.logging.SessionListen</listener-class>
+	</listener>
+
+	<context-param>
+		<param-name>logfilelocation</param-name>
+		<param-value>/webapps/logs/catalina.out</param-value>
+	</context-param>
+
+	<context-param>
+  		<param-name>dbhost</param-name>
+  		<param-value>localhost</param-value>
+	</context-param>
+	
+	<context-param>
+  		<param-name>rooturl</param-name>
+  		<param-value>http://127.0.0.1:8080</param-value>
+	</context-param>
+
+	<context-param>
+  		<param-name>isemailnotifier</param-name>
+  		<param-value>false</param-value>
+	</context-param>
+	
+	<context-param>
+  		<param-name>forcehttps</param-name>
+  		<param-value>false</param-value>
+	</context-param>
+	
+	<context-param>
+  		<param-name>maxattempts</param-name>
+  		<param-value>20</param-value>
+	</context-param>
+	
+
+
+	<context-param>
+  		<param-name>cdirlocation</param-name>
+  		<param-value>C:/Users/Mike Tanana/Desktop/</param-value>
+	</context-param>
+	
+	<filter>
+		<filter-name>auth</filter-name>
+		<filter-class>org.epc.sessions.LoginFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>auth</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+    	<servlet-name>userserve</servlet-name>
+    	<servlet-class>org.epc.servlets.UserServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>userserve</servlet-name>
+    	<url-pattern>/user/functions.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+    	<servlet-name>padmin</servlet-name>
+    	<servlet-class>org.epc.servlets.PAdminServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>padmin</servlet-name>
+    	<url-pattern>/padmin/functions.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+    	<servlet-name>gadmin</servlet-name>
+    	<servlet-class>org.epc.servlets.GAdminServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>gadmin</servlet-name>
+    	<url-pattern>/gadmin/functions.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+    	<servlet-name>sitemng</servlet-name>
+    	<servlet-class>org.epc.servlets.SiteMng</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>sitemng</servlet-name>
+    	<url-pattern>/sitemng/functions.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+    	<servlet-name>captivate</servlet-name>
+    	<servlet-class>org.epc.servlets.CaptivateCapture</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>captivate</servlet-name>
+    	<url-pattern>/bypass/captivate/capture.jsp</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+    	<servlet-name>ubjjserve</servlet-name>
+    	<servlet-class>org.epc.servlets.UBJJServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>ubjjserve</servlet-name>
+    	<url-pattern>/ubjj/functions.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+    	<servlet-name>gangserve</servlet-name>
+    	<servlet-class>org.epc.servlets.GangServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>gangserve</servlet-name>
+    	<url-pattern>/gang/functions.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+    	<servlet-name>jjsserve</servlet-name>
+    	<servlet-class>org.epc.servlets.JJSServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>jjsserve</servlet-name>
+    	<url-pattern>/jjs/functions.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+    	<servlet-name>upload</servlet-name>
+    	<servlet-class>org.epc.servlets.UploadServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>upload</servlet-name>
+    	<url-pattern>/bypass/uploadservlet.jsp</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+    	<servlet-name>anonlogin</servlet-name>
+    	<servlet-class>org.epc.servlets.AnonLogin</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>anonlogin</servlet-name>
+    	<url-pattern>/bypass/anon.jsp</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+    	<servlet-name>anon</servlet-name>
+    	<servlet-class>org.epc.servlets.AnonServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>anon</servlet-name>
+    	<url-pattern>/anon/functions.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+    	<servlet-name>ssserve</servlet-name>
+    	<servlet-class>org.epc.servlets.SSServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>ssserve</servlet-name>
+    	<url-pattern>/ss/functions.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+    	<servlet-name>fps</servlet-name>
+    	<servlet-class>org.epc.servlets.FPS</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>fps</servlet-name>
+    	<url-pattern>/bypass/fps.jsp</url-pattern>
+	</servlet-mapping>
+
+		<servlet>
+    	<servlet-name>IPN</servlet-name>
+    	<servlet-class>org.epc.servlets.IPN</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>IPN</servlet-name>
+    	<url-pattern>/bypass/ipn.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+    	<servlet-name>bypass</servlet-name>
+    	<servlet-class>org.epc.servlets.BypassFunctions</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>bypass</servlet-name>
+    	<url-pattern>/bypass/functions.jsp</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+    	<servlet-name>dcfs</servlet-name>
+    	<servlet-class>org.epc.servlets.DCFSServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>dcfs</servlet-name>
+    	<url-pattern>/dcfs/functions.jsp</url-pattern>
+	</servlet-mapping>
+
+
+
+
+</web-app>

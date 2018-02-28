@@ -1,0 +1,44 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+
+.myMainTitle { 
+	fontSize: 50;
+	color: #636871;
+	fontFamily: "Angsang New";
+	
+}
+
+.mySubTitleGrayLinkBar {
+	fontSize:16;
+	fontFamily: "Times New Roman";
+	color: #000000;
+	chromeColor: #67707E;
+	cornerRadius: 0;
+	
+}
+
+.mySubTitleGray {
+	fontSize: 16;
+	fontFamily: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+	color: #29282E;
+	
+	
+}
+
+.smallLabels{
+
+	fontSize: 11;
+	fontFamily: LucidaGrande, 'Lucida Sans Unicode', sans-serif;
+	color: #5E6066;
+	line-height: 21px;
+	text-shadow: white 0 1px 0;
+
+}
+.grayLabel2
+{
+	color: #636871;
+	fontFamily: "Angsana New";
+	fontSize: 29;
+	textDecoration: none;
+}

@@ -1,0 +1,56 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+
+.MainTitle
+{
+	color: #636871;
+	fontFamily: "Angsang New";
+	fontSize: 50;
+}
+.AllText
+{
+
+	fontFamily: "Times New Roman";
+	fontSize: 14;
+}
+
+.SmallTitles
+{
+	fontFamily: "Times New Roman";
+	fontSize: 16;
+	fontWeight: bold;
+}
+.SmallSubTitles
+{
+	
+	fontFamily: "Angsang New";
+	fontSize: 14;
+}
+.bigSubTitle
+{
+	color: #636871;
+	fontFamily: "Angsang New";
+	fontSize: 25;
+}
+.BiggerSmallTitle
+{
+	fontFamily: "Times New Roman";
+	fontSize: 18;
+	fontWeight: bold;
+}
+
+.smallButtons{
+	fontSize: 12;
+	fontFamily: "Angsang New",Times;
+	color: #5E6066;
+	
+}
+mx|DataGrid
+{
+	alternatingItemColors: #e7e7e7,'white';
+	borderAlpha: 0.2;
+	borderVisible: true;
+	verticalGridLineColor: #D7D4D4;
+	verticalGridLines: true;
+}
